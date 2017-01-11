@@ -117,7 +117,7 @@
                         <viewControllerLayoutGuide type="top" id="VbR-g1-L5J"/>
                         <viewControllerLayoutGuide type="bottom" id="3Xh-mF-nQl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iWt-EB-1ti" customClass="MapViewController">
+                    <view key="view" contentMode="scaleToFill" id="iWt-EB-1ti">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
