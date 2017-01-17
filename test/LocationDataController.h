@@ -14,5 +14,6 @@
 @property (nonatomic) Location *myPoi;
 
 - (Location*)getPointOfInterest;
+- (void)initDefaultPoi;
 
 @end

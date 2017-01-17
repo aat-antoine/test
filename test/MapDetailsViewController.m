@@ -14,7 +14,9 @@
 
 @end
 
-@implementation MapDetailsViewController
+@implementation MapDetailsViewController {
+    LocationDataController *model;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,36 +30,38 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    LocationDataController *model = [[LocationDataController alloc] init];
-    Location *poi = model.getPointOfInterest;
+    model = [[LocationDataController alloc] init];
+    [model initDefaultPoi];
     
     CLLocationCoordinate2D poiCoordinates;
-    poiCoordinates.latitude = poi.latitude;
-    poiCoordinates.longitude= poi.longitude;
+    poiCoordinates.latitude = model.myPoi.latitude;
+    poiCoordinates.longitude= model.myPoi.longitude;
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(poiCoordinates, 750, 750);
     
     [self.mapView setRegion:viewRegion animated:YES];
     self.mapView.showsUserLocation = YES;
+    
+    [self loadUserLocation];
 }
 
-- (void) loadUserLocation {
+- (void)loadUserLocation {
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
     locationManager.distanceFilter = kCLDistanceFilterNone;
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters;
     if ([locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        locationManager.requestWhenInUseAuthorization;
+        [locationManager requestWhenInUseAuthorization];
     } else {
-        locationManager.startUpdatingLocation;
+        [locationManager startUpdatingLocation];
     }
 }
 
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray *)locations __OSX_AVAILABLE_STARTING(__MAC_NA,__IPHONE_6_0) {
     CLLocation *newLocation = [locations objectAtIndex:0];
-    latitude_UserLocation = newLocation.coordinate.latitude;
-    longitude_UserLocation = newLocation.coordinate.longitude;
+    model.myPoi.latitude = newLocation.coordinate.latitude;
+    model.myPoi.longitude = newLocation.coordinate.longitude;
     [locationManager stopUpdatingLocation];
     [self loadMapView];
 }
@@ -68,10 +72,10 @@
 }
 
 - (void) loadMapView {
-    CLLocationCoordinate2D objCoor2D = {.latitude = latitude_UserLocation, .longitude = longitude_UserLocation};
+    CLLocationCoordinate2D objCoor2D = {.latitude = model.myPoi.latitude, .longitude = model.myPoi.longitude};
     MKCoordinateSpan objCoorSpan = {.latitudeDelta = 0.2, .longitudeDelta = 0.2};
     MKCoordinateRegion objMapRegion = {objCoor2D, objCoorSpan};
-    [objMapView setRegion:objMapRegion];
+    [self.mapView setRegion:objMapRegion];
 }
 
 /*
