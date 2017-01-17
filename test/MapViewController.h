@@ -10,4 +10,8 @@
 
 @interface MapViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *addrLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *coffeeImg;
+
+
 @end

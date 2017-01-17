@@ -7,6 +7,8 @@
 //
 
 #import "MapViewController.h"
+#import "LocationDataController.h"
+#import "Location.h"
 
 @interface MapViewController ()
 
@@ -24,6 +26,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    LocationDataController *model = [[LocationDataController alloc] init];
+    Location *poi = model.getPointOfInterest;
+    
+    self.addrLabel.text = poi.address;
+    // self.addrLabel.sizeToFit;
+    [self.coffeeImg setImage:[UIImage imageNamed:poi.photoFileName]];
+}
 
 #pragma mark - Navigation
 

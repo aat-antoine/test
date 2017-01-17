@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4C01EA761E2669780052D4B7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01EA751E2669780052D4B7 /* MapViewController.m */; };
+		4C01EA791E27D6EA0052D4B7 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01EA781E27D6EA0052D4B7 /* Location.m */; };
+		4C01EA7C1E27D7180052D4B7 /* LocationDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01EA7B1E27D7180052D4B7 /* LocationDataController.m */; };
+		4C01EA811E2E24220052D4B7 /* MapDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01EA801E2E24220052D4B7 /* MapDetailsViewController.m */; };
+		4C01EA841E2E26140052D4B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C01EA831E2E26140052D4B7 /* MapKit.framework */; };
+		4C01EA861E2E4D5E0052D4B7 /* coffeebeans.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C01EA851E2E4D5E0052D4B7 /* coffeebeans.png */; };
 		4C9D3BFB1E1422930037D48D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D3BFA1E1422930037D48D /* main.m */; };
 		4C9D3BFE1E1422930037D48D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D3BFD1E1422930037D48D /* AppDelegate.m */; };
 		4C9D3C011E1422930037D48D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D3C001E1422930037D48D /* ViewController.m */; };
@@ -38,6 +43,14 @@
 /* Begin PBXFileReference section */
 		4C01EA741E2669780052D4B7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		4C01EA751E2669780052D4B7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4C01EA771E27D6EA0052D4B7 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		4C01EA781E27D6EA0052D4B7 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		4C01EA7A1E27D7180052D4B7 /* LocationDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDataController.h; sourceTree = "<group>"; };
+		4C01EA7B1E27D7180052D4B7 /* LocationDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDataController.m; sourceTree = "<group>"; };
+		4C01EA7F1E2E24220052D4B7 /* MapDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDetailsViewController.h; sourceTree = "<group>"; };
+		4C01EA801E2E24220052D4B7 /* MapDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDetailsViewController.m; sourceTree = "<group>"; };
+		4C01EA831E2E26140052D4B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4C01EA851E2E4D5E0052D4B7 /* coffeebeans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffeebeans.png; sourceTree = SOURCE_ROOT; };
 		4C9D3BF61E1422930037D48D /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C9D3BFA1E1422930037D48D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C9D3BFC1E1422930037D48D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C01EA841E2E26140052D4B7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +95,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C01EA821E2E26140052D4B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C01EA831E2E26140052D4B7 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C9D3BED1E1422930037D48D = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +110,7 @@
 				4C9D3C121E1422930037D48D /* testTests */,
 				4C9D3C1D1E1422930037D48D /* testUITests */,
 				4C9D3BF71E1422930037D48D /* Products */,
+				4C01EA821E2E26140052D4B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +127,7 @@
 		4C9D3BF81E1422930037D48D /* test */ = {
 			isa = PBXGroup;
 			children = (
+				4C01EA851E2E4D5E0052D4B7 /* coffeebeans.png */,
 				4C01EA741E2669780052D4B7 /* MapViewController.h */,
 				4C01EA751E2669780052D4B7 /* MapViewController.m */,
 				4C9D3BFC1E1422930037D48D /* AppDelegate.h */,
@@ -115,6 +139,12 @@
 				4C9D3C071E1422930037D48D /* LaunchScreen.storyboard */,
 				4C9D3C0A1E1422930037D48D /* Info.plist */,
 				4C9D3BF91E1422930037D48D /* Supporting Files */,
+				4C01EA771E27D6EA0052D4B7 /* Location.h */,
+				4C01EA781E27D6EA0052D4B7 /* Location.m */,
+				4C01EA7A1E27D7180052D4B7 /* LocationDataController.h */,
+				4C01EA7B1E27D7180052D4B7 /* LocationDataController.m */,
+				4C01EA7F1E2E24220052D4B7 /* MapDetailsViewController.h */,
+				4C01EA801E2E24220052D4B7 /* MapDetailsViewController.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -254,6 +284,7 @@
 				4C9D3C091E1422930037D48D /* LaunchScreen.storyboard in Resources */,
 				4C9D3C061E1422930037D48D /* Assets.xcassets in Resources */,
 				4C9D3C041E1422930037D48D /* Main.storyboard in Resources */,
+				4C01EA861E2E4D5E0052D4B7 /* coffeebeans.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C9D3C011E1422930037D48D /* ViewController.m in Sources */,
+				4C01EA791E27D6EA0052D4B7 /* Location.m in Sources */,
+				4C01EA811E2E24220052D4B7 /* MapDetailsViewController.m in Sources */,
+				4C01EA7C1E27D7180052D4B7 /* LocationDataController.m in Sources */,
 				4C9D3BFE1E1422930037D48D /* AppDelegate.m in Sources */,
 				4C9D3BFB1E1422930037D48D /* main.m in Sources */,
 				4C01EA761E2669780052D4B7 /* MapViewController.m in Sources */,
